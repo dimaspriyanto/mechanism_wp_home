@@ -25,6 +25,69 @@ body {
   line-height: 1.6;
 }
 
+/* FLOATING SIDE MENU */
+.floating-menu {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 999;
+}
+
+.floating-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-menu-item > span:first-child {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.floating-menu-item.active > span:first-child {
+  background-color: var(--primary-blue);
+}
+
+.floating-menu-item:not(.active) > span:first-child {
+  background-color: var(--dark-bg);
+}
+
+.floating-menu-item:hover > span:first-child {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.floating-menu-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  text-align: center;
+  line-height: 1.4;
+  writing-mode: horizontal-tb;
+  max-width: 80px;
+  white-space: normal;
+}
+
+.floating-menu-item.active .floating-menu-label {
+  color: var(--primary-blue);
+}
+
 /* HERO SECTION */
 .hero {
   display: grid;
@@ -427,6 +490,10 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+  .floating-menu {
+    right: 1rem;
+  }
+
   .hero {
       grid-template-columns: 1fr;
       padding: 3rem 4%;
@@ -447,6 +514,25 @@ body {
 }
 
 @media (max-width: 768px) {
+  .floating-menu {
+    right: 0.5rem;
+    top: auto;
+    bottom: 2rem;
+    flex-direction: row;
+    transform: none;
+    gap: 1rem;
+  }
+
+  .floating-menu-item > span:first-child {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .floating-menu-label {
+    font-size: 0.65rem;
+  }
+
   .hero-content h1 {
       font-size: 2rem;
   }
