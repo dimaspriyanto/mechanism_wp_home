@@ -6,11 +6,12 @@
 
 :root {
   --primary-blue: #4B7FFF;
+  --pure-white: #FFFFFF;
   --dark-bg: #1a1a1a;
-  --light-bg: #f5f5f5;
-  --dark-text: #222;
+  --light-bg: #FAFAFA;
+  --dark-text: #222222;
   --light-text: #fff;
-  --accent-red: #E74C3C;
+  --accent-red: #FF0A09;
   --border-gray: #ddd;
   --sage-green: #7a9b8e;
 }
@@ -25,7 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* FLOATING SIDE MENU */
 .floating-menu {
   position: fixed;
   right: 2rem;
@@ -88,7 +88,6 @@ body {
   color: var(--primary-blue);
 }
 
-/* HERO SECTION */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,7 +112,7 @@ body {
 .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--accent-red);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
   line-height: 1.2;
@@ -152,7 +151,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--primary-blue);
+  background-color: var(--accent-red);
   color: var(--light-text);
 }
 
@@ -269,7 +268,7 @@ body {
 }
 
 .vision-questions {
-  background-color: white;
+  background-color: var(--pure-white);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -306,8 +305,8 @@ body {
 }
 
 .vision-values {
-  background-color: var(--dark-bg);
-  color: var(--light-text);
+  background-color: var(--pure-white);
+  color: var(--dark-text);
   padding: 3rem;
   border-radius: 8px;
   display: flex;
@@ -342,11 +341,12 @@ body {
   font-style: italic;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
+  color: var(--dark-text);
 }
 
 .vision-value p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: var(--dark-text);
   line-height: 1.7;
 }
 
