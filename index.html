@@ -5,49 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Small up Company - グローバルメニューは別途作成</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        /* Vision interactive styles */
-        .vision-questions ul li {
-            cursor: pointer;
-            transition: all 0.2s ease;
-            padding: 6px 10px;
-            border-radius: 4px;
-        }
-
-        .vision-questions ul li:hover {
-            opacity: 0.7;
-        }
-
-        .vision-questions ul li.active {
-            font-weight: bold;
-            background: rgba(255,255,255,0.15);
-            padding-left: 16px;
-        }
-
-        .vision-value {
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .vision-value.hidden {
-            display: none;
-        }
-
-        .vision-value.visible {
-            display: block;
-            animation: fadeInUp 0.35s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- FLOATING SIDE MENU -->
@@ -65,14 +22,17 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Small up Company</h1>
-            <p>小さなチームで大きな仕事をする、最高の会社をつくる。</p>
-            <p>人の代わりに働くコンテンツとコードをつくることで、少人数でも運営できる体制構築の支援を行う会社です。</p>
-            <p>1週間で18件のお問合せが入りました</p>
+            <h1>Building mechanisms that matter.</h1>
+            <p>価値ある仕組みをつくる、事業家集団。</p>
+            <p>
+                テクノロジーによる自動化、AI活用による人間価値の最大化を行うことで、新たな価値を作り続ける会社です。<br/>
+            </p>
+
+            <p class="stats-bubble">本日、1日で9件のお問い合わせをいただきました。</p>
             
             <div class="button-group">
-                <button class="btn btn-primary">資料DL</button>
-                <button class="btn btn-dark">お問い合わせ</button>
+                <button class="btn btn-primary">お問い合わせ</button>
+                <button class="btn btn-dark">会社資料ダウンロード</button>
             </div>
         </div>
 
@@ -82,12 +42,6 @@
             </div>
             <div class="carousel-dots">
                 <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -105,47 +59,138 @@
     <!-- VISION SECTION -->
     <section class="vision-section">
         <div class="vision-questions">
-            <h3>Questions</h3>
+            <h3>Value 私たちが大事にしている価値観</h3>
             <ul>
-                <li data-index="0">何を提供していますか?</li>
-                <li data-index="1">どんなサービスがありますか?</li>
-                <li data-index="2">どんなお問い合わせがありますか?</li>
-                <li data-index="3">どんな企業が御社の支援を受けていますか?</li>
-                <li data-index="4">どんな特徴ありますか?</li>
-                <li data-index="5">担当者についてはらっちゃはありますか?</li>
-                <li data-index="6">依頼したら成果は期待できますか?</li>
+                <li data-index="0">オモロイことをやり続ける</li>
+                <li data-index="1">自ら問いを立て、答えのない問いに挑む</li>
+                <li data-index="2">徹底的な仕組み化</li>
+                <li data-index="3">ぶち上げる</li>
+                <li data-index="4">合理の先にある、非合理を追求する</li>
             </ul>
         </div>
 
         <div class="vision-values">
             <div class="vision-value visible" data-index="0">
-                <h4>Be Professional</h4>
-                <p>学び続ける能を持ち、考え行動し、成果を得るまで終始一貫せよ。</p>
+                <h4>オモロイことをやり続ける</h4>
+                <p>
+                    創造はユーモアから生まれる。<br/>
+                    だから私たちは、面白いと思ったことにすぐ挑戦し続ける。<br/>
+                    挑戦を止めた瞬間、成長は止まる。
+                </p>
             </div>
-            <div class="vision-value hidden" data-index="1">
-                <h4>Be Yourself</h4>
-                <p>確固たる独自の軸を持ち、意義ある選択にのみ、集中せよ。</p>
+            <div class="vision-value visible" data-index="1">
+                <h4>自ら問いを立て、答えのない問いに挑む</h4>
+                <p>
+                    正解を探す時代は終わった。<br/>
+                    自ら問いを立て、答えのない領域に踏み込む。<br/>
+                    そこから新しい価値は生まれる。
+                </p>
             </div>
-            <div class="vision-value hidden" data-index="2">
-                <h4>Be Humane</h4>
-                <p>自他を受け入れる器を主台に、利己と利他のバランスを追求せよ。</p>
+            <div class="vision-value visible" data-index="2">
+                <h4>徹底的な仕組み化</h4>
+                <p>
+                    偶然の成果に価値はない。<br/>
+                    価値があるのは、再現できる成果だけだ。<br/>
+                    私たちは、すべて仕組みで価値をつくる。
+                </p>
             </div>
-            <div class="vision-value hidden" data-index="3">
-                <h4>Be Unique</h4>
-                <p>世間の常識に迎合せず、突き進め、互いのユニークさを歓迎せよ。</p>
+            <div class="vision-value visible" data-index="3">
+                <h4>ぶち上げる</h4>
+                <p>
+                    現状維持は、最大のリスクである。<br/>
+                    積み上げた土台の上で、基準と規模を引き上げ続ける。<br/>
+                    私たちはすべてを、ぶち上げにいく。
+                </p>
             </div>
-            <div class="vision-value hidden" data-index="4">
-                <h4>Be Growth</h4>
-                <p>自身の可能性を信じ、成長せよ。仲間を巻き込み、新たな文化を作れ。</p>
+            <div class="vision-value visible" data-index="4">
+                <h4>合理の先にある、非合理を追求する</h4>
+                <p>
+                    合理だけでは、人も組織も動かない。<br/>
+                    動かすのは、感情だ。<br/>
+                    だからこそ私たちは非合理を、戦略にする。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QNA SECTION -->
+    <section class="qna-section">
+        <div class="qna-questions">
+            <h3>FAQ メカニズムがよく聞かれる質問</h3>
+            <ul>
+                <li data-index="0">何をしている会社ですか？</li>
+                <li data-index="1">実績はありますか？</li>
+                <li data-index="2">どのような企業が御社の支援を受けていますか？</li>
+                <li data-index="3">どのようなお問い合わせが来ますか？</li>
+                <li data-index="4">中の人はどのような人たちですか？</li>
+                <li data-index="5">担当者によって差はありますか？</li>
+                <li data-index="6">採用はしていますか？</li>
+            </ul>
+        </div>
+
+        <div class="qna-values">
+            <div class="qna-value visible" data-index="0">
+                <h4>何をしている会社ですか？</h4>
+                <p>
+                    私たちは顧客獲得・人材獲得において、広告運用から商談・面談設定までを代行しつつ、同時にプロダクトや導線を改善し、集客・採用が回る体制そのものを構築する会社です。<br/>
+                    単なる運用代行ではなく、事業そのものに踏み込み、売上と組織成長に直結する支援を行います。<br/>
+                    [提供サービスを見る]ボタン                    
+                </p>
+            </div>
+            <div class="qna-value visible" data-index="1">
+                <h4>実績はありますか？</h4>
+                <p>
+                    2018年の創業から現在までに、累計100社を超える企業様を支援しています。<br/>
+                    一気通貫で事業に踏み込む支援スタイルのため、同時に多くの企業を抱えることはしません。1社1社の事業に深く入り込み、成果が出る状態をつくる支援を積み重ねてきました。<br/>
+                    [事例カテゴリを自動で表示されるようにする]                    
+                </p>
+            </div>
+            <div class="qna-value visible" data-index="2">
+                <h4>どのような企業が御社の支援を受けていますか？</h4>
+                <p>
+                    私たちの支援先は、特定の業界や規模に限定されていません。<br/>
+                    共通しているのは、「集客や採用を強化したい」のではなく、「事業の伸ばし方そのものを見直したい」と考えている企業様です。                    
+                </p>
+            </div>
+            <div class="qna-value visible" data-index="3">
+                <h4>どのようなお問い合わせが来ますか？</h4>
+                <p>
+                    私たちには次のようなご相談が多く寄せられます。<br/>
+                    <ul style="list-style-type: none;">
+                    <li>・広告を出しているが、問い合わせや商談につながらない</li>
+                    <li>・営業が属人化しており、安定して案件が生まれない</li>
+                    <li>・リードは来るが、受注率が低い</li>
+                    <li>・採用広告を出しても、人が集まらない</li>
+                    <li>・応募はあるが、面談や採用につながらない</li>
+                    <li>・商品やサービスに自信はあるが、集客が伸びない</li>
+                    <li>・今のやり方が正しいのかわからない</li>
+                    </ul>
+                    「広告だけ」「営業だけ」「採用だけ」の問題に見えても、実際には構造に原因があるケースがほとんどです。                    
+                </p>
+            </div>
+            <div class="qna-value visible" data-index="4">
+                <h4>中の人はどのような人たちですか？</h4>
+                <p>
+                    私たちは、福岡を拠点とする少数精鋭のコアメンバーと、専門領域ごとに連携する数十名規模の業務委託メンバーで構成されています。<br/>
+                    広告運用、営業支援、架電支援、採用支援、プロダクト改善、制作、運用オペレーションなど、それぞれの分野で実務経験を積んだメンバーが案件ごとにチームを組み、一社一社に最適な体制で支援を行っています。                    
+                </p>
             </div>
             <!-- Questions 5 & 6 cycle back to existing values -->
-            <div class="vision-value hidden" data-index="5">
-                <h4>Be Professional</h4>
-                <p>学び続ける能を持ち、考え行動し、成果を得るまで終始一貫せよ。</p>
+            <div class="qna-value visible" data-index="5">
+                <h4>担当者によって差はありますか？</h4>
+                <p>
+                    私たちは仕組みをつくる会社です。そのため、属人的な運用を前提としていません。<br/>
+                    すべての支援は、共通の基準・フロー・改善プロセスのもと、専門領域のプロフェッショナルがチームで担当します。<br/>
+                    誰が対応するかではなく、「どの体制で支援するか」によって品質が担保される設計になっているため、担当者によって成果やクオリティが大きく変わることはありません。                    
+                </p>
             </div>
-            <div class="vision-value hidden" data-index="6">
-                <h4>Be Growth</h4>
-                <p>自身の可能性を信じ、成長せよ。仲間を巻き込み、新たな文化を作れ。</p>
+            <div class="qna-value visible" data-index="6">
+                <h4>採用はしていますか？</h4>
+                <p>
+                    はい、採用は行っています。<br/>
+                    弊社は福岡を拠点に活動しており、事業の中核を担うメンバーの採用に加えて、広告運用、営業支援、採用支援、制作、運用オペレーション、プロダクト改善など、各領域のスキルを持つ業務委託メンバーも継続的に募集しています。<br/>
+                    正社員・業務委託に関わらず、単なる作業ではなく、事業づくりに関わりたい方、仕組みをつくる側に回りたい方とご一緒したいと考えています。
+                </p>
             </div>
         </div>
     </section>
@@ -196,29 +241,57 @@
     </section>
 
     <script>
-        // ── Vision Q&A interaction ──────────────────────────────
+        // Vision
         const questionItems = document.querySelectorAll('.vision-questions ul li');
         const visionValues  = document.querySelectorAll('.vision-values .vision-value');
 
-        // Set first question as active on load
         questionItems[0].classList.add('active');
 
         questionItems.forEach(li => {
             li.addEventListener('click', function () {
                 const idx = this.dataset.index;
 
-                // Update active question
                 questionItems.forEach(q => q.classList.remove('active'));
                 this.classList.add('active');
 
-                // Show matching value, hide the rest
                 visionValues.forEach(v => {
                     if (v.dataset.index === idx) {
-                        v.classList.remove('hidden');
+                        v.classList.remove('inactive');
                         v.classList.add('visible');
+
+                        const top = v.getBoundingClientRect().top + window.scrollY;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
                     } else {
                         v.classList.remove('visible');
-                        v.classList.add('hidden');
+                        v.classList.add('inactive');
+                    }
+                });
+            });
+        });
+
+        // QnA
+        const questionItemsQna = document.querySelectorAll('.qna-questions ul li');
+        const visionValuesQna  = document.querySelectorAll('.qna-values .qna-value');
+
+        questionItemsQna[0].classList.add('active');
+
+        questionItemsQna.forEach(li => {
+            li.addEventListener('click', function () {
+                const idx = this.dataset.index;
+
+                questionItemsQna.forEach(q => q.classList.remove('active'));
+                this.classList.add('active');
+
+                visionValuesQna.forEach(v => {
+                    if (v.dataset.index === idx) {
+                        v.classList.remove('inactive');
+                        v.classList.add('visible');
+
+                        const top = v.getBoundingClientRect().top + window.scrollY;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    } else {
+                        v.classList.remove('visible');
+                        v.classList.add('inactive');
                     }
                 });
             });
@@ -357,6 +430,7 @@
             heroCarousel.init();
             caseCarousel.init();
         });
+
     </script>
 </body>
 </html>

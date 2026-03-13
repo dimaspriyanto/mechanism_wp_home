@@ -246,6 +246,15 @@ body {
   color: #666;
 }
 
+.stats-bubble {
+  background: var(--dark-text);
+  color: var(--pure-white) !important;
+  font-size: 15px !important;
+  text-align: center;
+  width: 370px;
+  border-radius: 4px;
+  padding: 0 2px;
+}
 /* VISION SECTION */
 .vision-header {
   padding-top: 2rem;
@@ -273,6 +282,51 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   height: fit-content;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+/* Vision interactive styles */
+.vision-questions ul li {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.vision-questions ul li:hover {
+    opacity: 0.7;
+}
+
+.vision-questions ul li.active {
+    font-weight: bold;
+    background: rgba(255,255,255,0.15);
+    padding-left: 16px;
+}
+
+.vision-value {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.vision-value.hidden {
+    display: none;
+}
+
+.vision-value.visible {
+    display: block;
+    animation: fadeInUp 0.35s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .vision-questions h3 {
@@ -345,6 +399,155 @@ body {
 }
 
 .vision-value p {
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  line-height: 1.7;
+}
+
+/* QNA SECTION */
+.qna-header {
+  padding-top: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.qna-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.qna-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  padding: 4rem 5%;
+  background-color: var(--light-bg);
+}
+
+.qna-questions {
+  background-color: var(--pure-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+/* Vision interactive styles */
+.qna-questions ul li {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.qna-questions ul li:hover {
+    opacity: 0.7;
+}
+
+.qna-questions ul li.active {
+    font-weight: bold;
+    background: rgba(255,255,255,0.15);
+    padding-left: 16px;
+}
+
+.qna-value {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.qna-value.hidden {
+    display: none;
+}
+
+.qna-value.visible {
+    display: block;
+    animation: fadeInUp 0.35s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.qna-questions h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.qna-questions ul {
+  list-style: none;
+}
+
+.qna-questions li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.qna-questions li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.qna-values {
+  background-color: var(--pure-white);
+  color: var(--dark-text);
+  padding: 3rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qna-value {
+  margin-bottom: 3rem;
+  animation: slideUp 0.6s ease-out backwards;
+}
+
+.qna-value:nth-child(1) { animation-delay: 0.1s; }
+.qna-value:nth-child(2) { animation-delay: 0.2s; }
+.qna-value:nth-child(3) { animation-delay: 0.3s; }
+.qna-value:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.qna-value h4, .vision-value h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  color: var(--dark-text);
+}
+
+.qna-value p, .vision-value p {
   font-size: 0.95rem;
   color: var(--dark-text);
   line-height: 1.7;
